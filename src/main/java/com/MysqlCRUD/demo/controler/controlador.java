@@ -3,6 +3,7 @@ package com.MysqlCRUD.demo.controler;
 import com.MysqlCRUD.demo.interfaceService.IPersonaService;
 import com.MysqlCRUD.demo.modelo.Persona;
 import java.util.List;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,10 +28,9 @@ public class controlador {
         model.addAttribute("persona", new Persona());
         return"form";
     }
-    @GetMapping("/new")
     
     @PostMapping("/save")
-    public String save(Persona p,Model model){
+    public String save(@Valid Persona p,Model model){
         service.save(p);
         return"redirect:/listar";
     }

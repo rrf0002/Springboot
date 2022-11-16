@@ -1,8 +1,3 @@
-<!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
     <head>
@@ -13,18 +8,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <body>
         <div class="container mt-4">
             <div class="col-sm-6">
-                <form th:action="@{/save}" th:object="{persona}" method="POST">
+                <form th:action="@{/save}" th:object=${persona} method="POST">
                     <div class="card">
                         <div class="card-header">
                             <h3>Módulo Persona</h3>
                         </div>
                         <div class="card-body">
+                          
                             <div class="form-group">
-                                <label>ID</label>
-                                <input th:field="*{id}" type="text" class="form-control"/>
-                            </div>
-                            <div class="form-group">
-                                <label>Nombres</label>
+                                <label>Nombre</label>
                                 <input th:field="*{name}" type="text" class="form-control"/>
                             </div>
                             <div class="form-group">

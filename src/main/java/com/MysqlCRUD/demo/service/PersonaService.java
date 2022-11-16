@@ -32,7 +32,7 @@ public class PersonaService implements IPersonaService {
     public int save(Persona p) {
         int res=0;
         Persona persona=data.save(p);
-        if(persona.equals(null)){
+        if(!persona.equals(null)){
             res=1;
         }
         return res;

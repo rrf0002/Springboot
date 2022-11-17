@@ -25,7 +25,7 @@ public class PersonaService implements IPersonaService {
 
     @Override
     public Optional<Persona> listarId(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    return data.findById(id); 
     }
 
     @Override
@@ -40,7 +40,7 @@ public class PersonaService implements IPersonaService {
 
     @Override
     public void Delete(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        data.deleteById(id);
     }
 
 }
